@@ -1,0 +1,7 @@
+.DS_Store
+features/chromedriver
+*.pyc
+.idea/
+behave-python/
+.vscode/
+.env
