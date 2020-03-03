@@ -1,3 +1,5 @@
+from datetime import date
+
 from selenium.webdriver.common.by import By
 
 from elements.element import Element
@@ -23,6 +25,8 @@ class LoginPage(BasePage):
         self.username_field.value = DataGenerator.generate_random_string() if username is None else username
         self.password_field.value = DataGenerator.generate_random_string() if password is None else password
         self.login_button.click()
+
+
 
 
 

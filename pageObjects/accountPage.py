@@ -1,3 +1,5 @@
+from datetime import date
+
 from hamcrest import equal_to, assert_that
 from selenium.webdriver.common.by import By
 
@@ -11,8 +13,17 @@ class AccountPage(BasePage):
 
     def __init__(self, context):
         super().__init__(context)
-        self.header = Element(
-            By.XPATH, "//h3[@class='text-align-left']", context)
+        self.date = Element(
+            By.XPATH, "//span[@class='h4']", context)
+        self.home_page_header= Element(
+            By.XPATH, "//div[@class='header-logo go-right']//a//img", context)
+
 
     def is_element_found(self):
-        assert_that(self.header.text, equal_to("Hi, Demo User"))
+        assert_that(self.date.text, equal_to(date.today().strftime("%-d %B %Y")))
+
+    def press_home_page_header(self):
+        self.home_page_header.click()
+
+
+
