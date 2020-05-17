@@ -1,7 +1,7 @@
 @change_currency
 Feature: change_currency
 
-  @web @smoke
+  @web
   Scenario: Change currency
      Given I am on phptravels homepage
        And I login to phptravels
