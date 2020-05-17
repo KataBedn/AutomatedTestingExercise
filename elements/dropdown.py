@@ -23,3 +23,12 @@ class Dropdown(BaseElement):
 
     def _create_subelements(self):
         self.option = Element(By.XPATH, self.selector + "...", self.context)
+
+    def select(self):
+        pass
+
+    def select_by_index(self, param):
+        pass
+
+    def select_by_xpath(self, param):
+        pass
